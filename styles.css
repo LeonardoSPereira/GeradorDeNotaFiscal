@@ -8,6 +8,7 @@
     font-size: 62.5%;
 
     --color-bg-primary: #FAF9FB;
+    --color-bg-secondary: #F0F0F0;
     --color-primary: #0090FF;
     --color-primary-light: #00B4FF;
     --color-text-primary: #1C2024;
@@ -61,7 +62,7 @@ legend {
     margin: 2rem 0 4rem;
 }
 
-span {
+form span {
     margin-top: 1.6rem; 
     display: block;
     font-size: 1.6rem;
@@ -101,6 +102,103 @@ textarea {
     color: var(--color-text-primary);
     font-size: 2rem;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+#invoice {
+    max-width: 100rem;
+    width: fit-content;
+    margin: 4rem auto;
+    background-color: var(--color-bg-secondary);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem 2rem;
+}
+
+.invoiceHeaderInfo,
+.invoiceHeaderCompany,
+.invoiceHeaderRecipient,
+.invoiceBodyDescription {
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+.invoiceHeaderCompany,
+.invoiceHeaderRecipient,
+.invoiceBodyDescription {
+    padding: 1rem;
+    
+}
+
+.invoiceHeaderInfo .header {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    border: 1px solid #000000;
+}
+
+.invoiceHeaderInfo .header h3{
+    margin-top: 1rem;
+}
+
+.invoiceHeaderInfo .info {
+    font-size: 1.6rem;
+}
+
+.invoiceHeaderInfo .info p {
+    margin-top: 0.8rem;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.invoiceHeaderCompany h2,
+.invoiceHeaderRecipient h2,
+.invoiceBodyDescription h2 {
+    margin-block: 1rem;
+    text-transform: uppercase;
+}
+
+.invoiceHeaderCompany p,
+.invoiceHeaderRecipient p,
+.invoiceBodyDescription p {
+    padding-left: 1rem;
+    text-align: start;
+    margin-bottom: 0.1rem;
+}
+
+.invoiceBodyTaxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000000;
+
+}
+
+.invoiceBodyTaxes p {
+    min-height: 4.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.1rem;
+    border: 1px solid #000000;
+}
+
+.invoiceBody h5 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    border: 1px solid #000000;
 
 }
 
@@ -165,6 +263,34 @@ textarea {
 
     .service .serviceDescription {
         width: 100%;
+    }
+
+    #invoice {
+        padding: 2rem 4rem;
+    }
+
+    .invoiceHeaderInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .invoiceHeaderInfo .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .invoiceHeaderInfo .info p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .invoiceBodyTaxes p {
+        gap: 0.2rem;
+        font-size: 1.6rem;
+        align-items: center;
+        padding: 0.5rem;
     }
 }
 

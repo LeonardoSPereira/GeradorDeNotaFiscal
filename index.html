@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Gerador de Nota Fiscal</title>
 </head>
 <body class="dark">
@@ -144,7 +145,7 @@
 
                     <div class="serviceTotal">
                         <label for="serviceTotal">Total Bruto</label>
-                        <input disabled type="number" id="serviceTotal">
+                        <input disabled value="00.00" type="number" id="serviceTotal">
                     </div>
 
                 </div>
@@ -201,7 +202,9 @@
 
         </form>
 
-        
+        <div id="invoice">
+
+        </div>
     </main>
 
     <script type="module" src="./js/index.js"></script>
