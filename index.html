@@ -12,12 +12,12 @@
 <body class="dark">
     
     <header>
-        <h1>Gerador de Nota Fiscal</h1>
+        <h1>Gerador de Nota Fiscal de prestação de serviços</h1>
     </header>
 
     <main>
         <form>
-            <div class="companyInfo">
+            <div id="companyInfo">
 
                 <fieldset>
                     <legend>Prestador de serviços</legend>
@@ -66,7 +66,7 @@
 
             </div>
 
-            <div class="recipientInfo">
+            <div id="recipientInfo">
 
                 <fieldset>
                     <legend>Tomador de serviços</legend>
@@ -117,7 +117,7 @@
 
             </div>
 
-            <div class="productInfo">
+            <div id="productInfo">
 
                 <fieldset>
                     <legend>Discriminação do serviço</legend>
@@ -148,7 +148,60 @@
                     </div>
 
                 </div>
+            </div>
+
+            <div id="discount_tax">
+
+            <!-- descontos e taxas -->
+                <fieldset>
+                    <legend>Descontos e Taxas</legend>
+                </fieldset>
+                    
+                <span>Em porcentagem</span>
+                    
+                <div class="discount_tax">
+
+                        <div class="discount">
+                            <label for="discount">Desconto</label>
+                            <input required value="5" type="number" id="discount">
+                        </div>
+
+                        <div class="irpj">
+                            <label for="irpj">IRPJ</label>
+                            <input required value="15" type="number" id="irpj">
+                        </div>
+
+                        <div class="irrf">
+                            <label for="irrf">IRRF</label>
+                            <input required value="1.5" type="number" id="irrf">
+                        </div>
+
+                        <div class="pis">
+                            <label for="pis">PIS</label>
+                            <input required value="1.65" type="number" id="pis">
+                        </div>
+
+                        <div class="cofins">
+                            <label for="cofins">COFINS</label>
+                            <input required value="7.6" type="number" id="cofins">
+                        </div>
+
+                        <div class="csll">
+                            <label for="csll">CSLL</label>
+                            <input required value="9" type="number" id="csll">
+                        </div>
+                </div>
+
+
+            </div>
+
+            
+            <button class="btn">Gerar Nota Fiscal</button>
+
+
         </form>
+
+        
     </main>
 
     <script type="module" src="./js/index.js"></script>

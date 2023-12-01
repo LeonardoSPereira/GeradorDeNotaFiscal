@@ -7,6 +7,7 @@
 :root {
     font-size: 62.5%;
 
+    --color-bg-primary: #FAF9FB;
     --color-primary: #0090FF;
     --color-primary-light: #00B4FF;
     --color-text-primary: #1C2024;
@@ -17,7 +18,7 @@
 
 body {
     font-size: 1.6rem;
-    background-color: #FAF9FB;
+    background-color: var(--color-bg-primary);
 }
 
 body, input, button, textarea {
@@ -40,7 +41,8 @@ h1 {
 form {
     width: 100%;
     padding-inline: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
+    border-bottom: 1px solid linear;
 }
 
 fieldset {
@@ -55,8 +57,16 @@ legend {
     padding-bottom: 1rem;
 }
 
-.company, .recipient, .service {
+.company, .recipient, .service, .discount_tax {
     margin: 2rem 0 4rem;
+}
+
+span {
+    margin-top: 1.6rem; 
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-alert);
 }
 
 label {
@@ -82,6 +92,18 @@ textarea {
     height: 10rem;
 }
 
+.btn {
+    width: fit-content;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-text-primary);
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
 @media (min-width: 768px) {
 
     header {
@@ -96,7 +118,7 @@ textarea {
         padding-inline: 4rem;
     }
 
-    .company, .recipient, .service {
+    .company, .recipient, .service, .discount_tax {
         margin: 2rem 0 4rem;
         display: flex;
         flex-wrap: wrap;
