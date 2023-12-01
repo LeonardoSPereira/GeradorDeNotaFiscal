@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-primary: #0090FF;
+    --color-primary-light: #00B4FF;
+    --color-text-primary: #1C2024;
+    --color-text-secondary: #60646C;
+    --color-alert: #CE2C31;
+
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #FAF9FB;
+}
+
+body, input, button, textarea {
+    font-family: 'Lato', sans-serif;
+    outline: none;
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 4rem;
+    text-align: center;
+}
+
+h1 {
+    color: var(--color-text-primary);
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+form {
+    width: 100%;
+    padding-inline: 2rem;
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: none;
+    border-bottom: 1px solid var(--color-primary-light);
+}
+
+legend {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    padding-bottom: 1rem;
+}
+
+.company, .recipient, .service {
+    margin: 2rem 0 4rem;
+}
+
+label {
+    margin-top: 1.6rem;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--color-primary-light);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+textarea {
+    resize: none;
+    height: 10rem;
+}
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 6rem;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    form {
+        padding-inline: 4rem;
+    }
+
+    .company, .recipient, .service {
+        margin: 2rem 0 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    legend {
+        font-size: 3.2rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    input {
+        font-size: 1.8rem;
+    }
+
+    .company .companyCnpj, 
+    .company .companyStateRegistration,
+    .recipient .recipientCPF,
+    .recipient .recipientEmail {
+        flex: 1 1 20%;
+    }
+
+    .company .companyName, 
+    .recipient .recipientName {
+        width: 100%;
+    }
+
+    .company .companyAddress,
+    .company .companyCep,
+    .company .companyCity,
+    .company .companyState,
+    .recipient .recipientAddress,
+    .recipient .recipientCep,
+    .recipient .recipientCity,
+    .recipient .recipientState,
+    .service .serviceQuantity,
+    .service .serviceValue,
+    .service .serviceTotal {
+        flex: 1 1 20%;
+    }
+
+    .service .serviceDescription {
+        width: 100%;
+    }
+}
+
+
+

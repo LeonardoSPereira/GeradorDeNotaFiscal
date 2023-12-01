@@ -1,14 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Gerador de Nota Fiscal</title>
 </head>
-<body>
+<body class="dark">
     
-    <h1>hello world</h1>
+    <header>
+        <h1>Gerador de Nota Fiscal</h1>
+    </header>
+
+    <main>
+        <form>
+            <div class="companyInfo">
+
+                <fieldset>
+                    <legend>Prestador de serviços</legend>
+                </fieldset>
+
+                <!-- informações da companhia -->
+
+                <div class="company">
+                    <div class="companyCnpj">
+                        <label for="companyCnpj">CNPJ</label>
+                        <input required type="text" id="companyCnpj">
+                    </div>
+
+                    <div class="companyStateRegistration">
+                        <label for="companyStateRegistration">Inscrição Estadual</label>
+                        <input required type="text" id="companyStateRegistration">
+                    </div>
+
+                    <div class="companyName">
+                        <label for="companyName">Nome/Razão Social</label>
+                        <input required type="text" id="companyName">
+                    </div>
+
+                    <div class="companyAddress">
+                        <label for="companyAddress">Endereço</label>
+                        <input required type="text" id="companyAddress">
+                    </div>
+
+                    <div class="companyCep">
+                        <label for="companyCep">CEP</label>
+                        <input required type="text" id="companyCep">
+                    </div>
+
+                    <div class="companyCity">
+                        <label for="companyCity">Cidade</label>
+                        <input required type="text" id="companyCity">
+                    </div>
+
+                    <div class="companyState">
+                        <label for="companyState">Estado</label>
+                        <input required type="text" id="companyState">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="recipientInfo">
+
+                <fieldset>
+                    <legend>Tomador de serviços</legend>
+                </fieldset>
+
+                <!-- informações do beneficiário -->
+
+                <div class="recipient">
+
+                    <div class="recipientName">
+                        <label for="recipientName">Nome/Razão Social</label>
+                        <input required type="text" id="recipientName">
+                    </div>
+
+                    <div class="recipientCPF">
+                        <label for="recipientCPF">CPF/CNPJ</label>
+                        <input required type="text" id="recipientCPF">
+                    </div>
+
+
+                    <div class="recipientEmail">
+                        <label for="recipientEmail">E-mail</label>
+                        <input required type="email" id="recipientEmail">
+                    </div>
+
+                    <div class="recipientAddress">
+                        <label for="recipientAddress">Endereço</label>
+                        <input required type="text" id="recipientAddress">
+                    </div>
+
+                    <div class="recipientCep">
+                        <label for="recipientCep">CEP</label>
+                        <input required type="text" id="recipientCep">
+                    </div>
+
+                    <div class="recipientCity">
+                        <label for="recipientCity">Cidade</label>
+                        <input required type="text" id="recipientCity">
+                    </div>
+
+                    <div class="recipientState">
+                        <label for="recipientState">Estado</label>
+                        <input required type="text" id="recipientState">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="productInfo">
+
+                <fieldset>
+                    <legend>Discriminação do serviço</legend>
+                </fieldset>
+
+                <!-- informações do produto -->
+
+                <div class="service">
+
+                    <div class="serviceDescription">
+                        <label for="serviceDescription">Descrição do serviço</label>
+                        <textarea name="serviceDescription" id="serviceDescription"></textarea>
+                    </div>
+
+                    <div class="serviceQuantity">
+                        <label for="serviceQuantity">Quantidade</label>
+                        <input required type="number" id="serviceQuantity">
+                    </div>
+
+                    <div class="serviceValue">
+                        <label for="serviceValue">Valor</label>
+                        <input required type="number" id="serviceValue">
+                    </div>
+
+                    <div class="serviceTotal">
+                        <label for="serviceTotal">Total Bruto</label>
+                        <input disabled type="number" id="serviceTotal">
+                    </div>
+
+                </div>
+        </form>
+    </main>
 
     <script type="module" src="./js/index.js"></script>
 </body>
