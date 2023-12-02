@@ -12,33 +12,14 @@ let company = {
     state: ''
 }
 
-elements.companyCNPJ.addEventListener('input', (e) => {
-    company.cnpj = e.target.value;
-})
+functions.handleInput(elements.companyCNPJ, 'cnpj', company);
+functions.handleInput(elements.companyIM, 'im', company);
+functions.handleInput(elements.companyName, 'name', company);
+functions.handleInput(elements.companyAddress, 'address', company);
+functions.handleInput(elements.companyCEP, 'cep', company);
+functions.handleInput(elements.companyCity, 'city', company);
+functions.handleInput(elements.companyState, 'state', company);
 
-elements.companyIM.addEventListener('input', (e) => {
-    company.im = e.target.value;
-})
-
-elements.companyName.addEventListener('input', (e) => {
-    company.name = e.target.value;
-})
-
-elements.companyAddress.addEventListener('input', (e) => {
-    company.address = e.target.value;
-})
-
-elements.companyCEP.addEventListener('input', (e) => {
-    company.cep = e.target.value;
-})
-
-elements.companyCity.addEventListener('input', (e) => {
-    company.city = e.target.value;
-})
-
-elements.companyState.addEventListener('input', (e) => {
-    company.state = e.target.value;
-})
 
 // Recipient info
 let recipient = {
@@ -51,33 +32,13 @@ let recipient = {
     state: ''
 }
 
-elements.recipientName.addEventListener('input', (e) => {
-    recipient.name = e.target.value;
-})
-
-elements.recipientCPF.addEventListener('input', (e) => {
-    recipient.cpf = e.target.value;
-})
-
-elements.recipientEmail.addEventListener('input', (e) => {
-    recipient.email = e.target.value;
-})
-
-elements.recipientAddress.addEventListener('input', (e) => {
-    recipient.address = e.target.value;
-})
-
-elements.recipientCEP.addEventListener('input', (e) => {
-    recipient.cep = e.target.value;
-})
-
-elements.recipientCity.addEventListener('input', (e) => {
-    recipient.city = e.target.value;
-})
-
-elements.recipientState.addEventListener('input', (e) => {
-    recipient.state = e.target.value;
-})
+functions.handleInput(elements.recipientName, 'name', recipient);
+functions.handleInput(elements.recipientCPF, 'cpf', recipient);
+functions.handleInput(elements.recipientEmail, 'email', recipient);
+functions.handleInput(elements.recipientAddress, 'address', recipient);
+functions.handleInput(elements.recipientCEP, 'cep', recipient);
+functions.handleInput(elements.recipientCity, 'city', recipient);
+functions.handleInput(elements.recipientState, 'state', recipient);
 
 // Service info
 let service = {
@@ -125,7 +86,6 @@ let taxes = {
     csll: 0
 }
 
-
 elements.IRPJ.addEventListener('input', (e) => {
     const irpj = e.target.value;
     taxes.irpj = (irpj / 100 * service.total).toFixed(2);
@@ -153,8 +113,6 @@ elements.CSLL.addEventListener('input', (e) => {
 
 
 
-
-
 // create invoice
 elements.btn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -165,8 +123,7 @@ elements.btn.addEventListener('click', (e) => {
     // Total with taxes
     const totalWithTaxes = functions.totalWithTaxes(totalWithDiscount, taxes);
 
-    elements.invoice.innerHTML = 
-    `
+    elements.invoice.innerHTML =  `
     <h2>Essa nota não deve ser usada para fins legais. Ela serve apenas como exemplo.</h2>
 
     <div class="invoiceHeader">   
@@ -237,6 +194,5 @@ elements.btn.addEventListener('click', (e) => {
 
     </div>
 
-    <button class="btn" onclick="${functions.generatePDF()}"></button>
     `
 })

@@ -5,6 +5,13 @@ export const invoiceNumber = Math.round(Math.random() * 1000);
 const date = new Date();
 export const invoiceDate = `${String(date.getDate()).padStart(2, "0")}/${String(date.getMonth() + 1).padStart(2, "0")}/${date.getFullYear()}`;
 
+// Function to handle input
+export function handleInput(element, property, object) {
+    element.addEventListener('input', (e) => {
+        object[property] = e.target.value;
+    });
+}
+
 //Function to update total value
 export function serviceTotal(quantity, value) {
     const quantityNumber = Number(quantity);
@@ -36,8 +43,4 @@ export function totalWithTaxes(total, taxes) {
     }
 
     return (totalNumber + totalTaxes).toFixed(2);
-}
-
-export function generatePDF() {
-    html2pdf().from(elements.companyinfo).save();    
 }

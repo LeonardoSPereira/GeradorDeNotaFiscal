@@ -114,7 +114,7 @@ textarea {
 }
 
 #invoice {
-    max-width: 100rem;
+    max-width: 72rem;
     width: fit-content;
     position: relative;
     margin: 18rem auto;
