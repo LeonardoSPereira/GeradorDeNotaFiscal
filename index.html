@@ -32,9 +32,9 @@
                         <input required type="text" id="companyCnpj">
                     </div>
 
-                    <div class="companyStateRegistration">
-                        <label for="companyStateRegistration">Inscrição Estadual</label>
-                        <input required type="text" id="companyStateRegistration">
+                    <div class="companyRegistration">
+                        <label for="companyRegistration">Inscrição Municipal</label>
+                        <input required type="text" id="companyRegistration">
                     </div>
 
                     <div class="companyName">
@@ -145,7 +145,7 @@
 
                     <div class="serviceTotal">
                         <label for="serviceTotal">Total Bruto</label>
-                        <input disabled value="00.00" type="number" id="serviceTotal">
+                        <input readonly type="number" id="serviceTotal">
                     </div>
 
                 </div>
@@ -164,41 +164,39 @@
 
                         <div class="discount">
                             <label for="discount">Desconto</label>
-                            <input required value="5" type="number" id="discount">
+                            <input required placeholder="5" type="number" id="discount">
                         </div>
 
                         <div class="irpj">
                             <label for="irpj">IRPJ</label>
-                            <input required value="15" type="number" id="irpj">
+                            <input required placeholder="15" type="number" id="irpj">
                         </div>
 
                         <div class="irrf">
                             <label for="irrf">IRRF</label>
-                            <input required value="1.5" type="number" id="irrf">
+                            <input required placeholder="1.5" type="number" id="irrf">
                         </div>
 
                         <div class="pis">
                             <label for="pis">PIS</label>
-                            <input required value="1.65" type="number" id="pis">
+                            <input required placeholder="1.65" type="number" id="pis">
                         </div>
 
                         <div class="cofins">
                             <label for="cofins">COFINS</label>
-                            <input required value="7.6" type="number" id="cofins">
+                            <input required placeholder="7.6" type="number" id="cofins">
                         </div>
 
                         <div class="csll">
                             <label for="csll">CSLL</label>
-                            <input required value="9" type="number" id="csll">
+                            <input required placeholder="9" type="number" id="csll">
                         </div>
                 </div>
 
 
             </div>
-
-            
+     
             <button class="btn">Gerar Nota Fiscal</button>
-
 
         </form>
 

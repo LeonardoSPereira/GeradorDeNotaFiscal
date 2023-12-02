@@ -85,6 +85,10 @@ input, textarea {
     border: 1px solid var(--color-primary-light);
     border-radius: 0.5rem;
     margin-top: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+input::placeholder, textarea::placeholder {
     color: var(--color-text-secondary);
 }
 
@@ -112,10 +116,26 @@ textarea {
 #invoice {
     max-width: 100rem;
     width: fit-content;
-    margin: 4rem auto;
+    position: relative;
+    margin: 18rem auto;
     background-color: var(--color-bg-secondary);
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem 2rem;
+}
+
+#invoice > h2 {
+    max-width: 65rem;
+    width: fit-content;
+    text-align: center;
+    margin-right: 4rem;
+    padding: 1rem;
+    position: absolute;
+    top: -16rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background-color: var(--color-alert);
+    color: var(--color-bg-primary);
+    margin-bottom: 2rem;
 }
 
 .invoiceHeaderInfo,
@@ -196,7 +216,6 @@ textarea {
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
-    margin-bottom: 2rem;
     text-transform: uppercase;
     border: 1px solid #000000;
 
@@ -236,7 +255,7 @@ textarea {
     }
 
     .company .companyCnpj, 
-    .company .companyStateRegistration,
+    .company .companyRegistration,
     .recipient .recipientCPF,
     .recipient .recipientEmail {
         flex: 1 1 20%;
@@ -267,6 +286,13 @@ textarea {
 
     #invoice {
         padding: 2rem 4rem;
+        margin: 12rem auto;
+    }
+    
+    #invoice > h2 {
+        top: -10rem;
+        font-size: 3.2rem;
+        margin-bottom: 4rem;
     }
 
     .invoiceHeaderInfo {
